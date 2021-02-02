@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_dark"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/temp_input"
+        android:layout_width="415dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="64dp"
+        android:digits="0123456789-."
+        android:ems="10"
+        android:hint="@string/enter_temperature"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/conbutton"
+        android:layout_width="347dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="16dp"
+        android:background="#2196F3"
+        android:onClick="convert"
+        android:text="@string/convert"
+        android:textColor="#FFEB3B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Final_result"
+        android:layout_width="225dp"
+        android:layout_height="85dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/_0"
+        android:textColor="#000000"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.301" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="406dp"
+        android:layout_height="152dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp_input"
+        app:layout_constraintVertical_bias="0.231">
+
+        <RadioButton
+            android:id="@+id/ftoc"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/fahrenheit_to_celcius"
+            android:textColor="#000000"
+            android:textSize="28sp" />
+
+        <RadioButton
+            android:id="@+id/ctof"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:checked="false"
+            android:text="@string/celcius_to_fahrenheit"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="28sp" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
